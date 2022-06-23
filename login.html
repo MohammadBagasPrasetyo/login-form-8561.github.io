@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 350px;
+            height: 500px;
+            background-color: rgb(25, 122, 197);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .container .header h1 {
+            color: azure;
+            text-align: center;
+        }
+        .container .form {
+            margin-top: 50px;
+        }
+        .container .form .inputbox {
+            position: relative;
+            margin-left: 10px;
+        }
+        .container .form .inputbox:nth-child(2) {
+            margin-top: 20px;
+        } 
+        .container .form .inputbox input {
+            width: 320px;
+            height: 35px;
+            border-radius: 7px;
+            border: 3px solid rgb(3, 2, 8);
+        }
+        .container .form .inputbox span {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            transition: 1s;
+        }
+        .container .form .inputbox input:valid ~ span,
+        .container .form .inputbox input:focus ~ span {
+            transform: translateX(8px) translateY(-18px);
+            background-color: rgb(25, 122, 197);
+            letter-spacing: 2px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+        .container button {
+            width: 330px;
+            height: 40px;
+            margin-top: 20px;
+            background-color: rgb(199, 250, 58);
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        .container:hover button {
+            box-shadow: 4px 5px black;
+        }
+        .container button:active {
+            transform: translateY(5px) translateX(4px);
+            box-shadow: 0px 0px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="form">
+            <div class="inputbox">
+                <input type="text" required="required">
+                <span>Email</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" required="required">
+                <span>Password</span>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+        
+    </div>
+</body>
+</html>
